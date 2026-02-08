@@ -1,6 +1,6 @@
 namespace DirectoryService.Domain.Positions.VO;
 
-public record PositionId
+public sealed record PositionId
 {
     private PositionId(Guid value)
     {

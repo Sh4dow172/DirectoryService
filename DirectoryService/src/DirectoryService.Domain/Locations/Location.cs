@@ -5,7 +5,7 @@ using Shared;
 
 namespace DirectoryService.Domain.Locations;
 
-public class Location
+public sealed class Location
 {
     //efcore
     private Location() {}

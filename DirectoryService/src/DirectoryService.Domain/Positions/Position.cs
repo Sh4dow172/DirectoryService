@@ -5,7 +5,7 @@ using Shared;
 
 namespace DirectoryService.Domain.Positions;
 
-public class Position
+public sealed class Position
 {
     //efcore
     private Position() {}

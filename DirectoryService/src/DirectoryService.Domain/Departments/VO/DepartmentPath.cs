@@ -4,7 +4,7 @@ using Shared;
 
 namespace DirectoryService.Domain.Departments.VO;
 
-public record DepartmentPath
+public sealed record DepartmentPath
 {
     private DepartmentPath(string value)
     {

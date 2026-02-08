@@ -3,7 +3,7 @@ using Shared;
 
 namespace DirectoryService.Domain.Positions.VO;
 
-public record PositionDescription
+public sealed record PositionDescription
 {
     private const int MaxLength = 1000;
     

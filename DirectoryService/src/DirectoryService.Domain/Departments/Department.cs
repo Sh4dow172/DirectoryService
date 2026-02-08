@@ -4,7 +4,7 @@ using Shared;
 
 namespace DirectoryService.Domain.Departments;
 
-public class Department
+public sealed class Department
 {
     //efcore
     private Department() {}

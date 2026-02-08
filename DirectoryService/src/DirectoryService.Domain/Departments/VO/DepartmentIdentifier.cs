@@ -3,7 +3,7 @@ using Shared;
 
 namespace DirectoryService.Domain.Departments.VO;
 
-public record DepartmentIdentifier
+public sealed record DepartmentIdentifier
 {
     private const int MinLength = 3;
     private const int MaxLength = 150;

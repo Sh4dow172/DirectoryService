@@ -1,6 +1,6 @@
 namespace DirectoryService.Domain.Departments.VO;
 
-public record DepartmentId
+public sealed record DepartmentId
 {
     private DepartmentId(Guid value)
     {

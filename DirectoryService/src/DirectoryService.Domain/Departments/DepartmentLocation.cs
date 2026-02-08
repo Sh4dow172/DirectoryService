@@ -2,7 +2,7 @@ using DirectoryService.Domain.Departments.VO;
 
 namespace DirectoryService.Domain.Departments;
 
-public class DepartmentLocation
+public sealed class DepartmentLocation
 {
     //efcore
     private DepartmentLocation() {}
