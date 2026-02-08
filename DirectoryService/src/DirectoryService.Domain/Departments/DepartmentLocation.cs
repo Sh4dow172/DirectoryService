@@ -7,7 +7,7 @@ public class DepartmentLocation
     //efcore
     private DepartmentLocation() {}
     
-    private DepartmentLocation(DepartmentLocationId departmentLocationId, Guid departmentId, Guid locationId)
+    public DepartmentLocation(DepartmentLocationId departmentLocationId, Guid departmentId, Guid locationId)
     {
         Id = departmentLocationId;
         DepartmentId = departmentId;
@@ -19,8 +19,4 @@ public class DepartmentLocation
     public Guid DepartmentId { get; private set; }
     
     public Guid LocationId { get; private set; }
-
-    public static DepartmentLocation Create
-    (DepartmentLocationId departmentLocationId, Guid locationId, Guid departmentId) 
-        => new DepartmentLocation(departmentLocationId, departmentId, locationId);
 }

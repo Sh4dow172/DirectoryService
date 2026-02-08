@@ -10,7 +10,7 @@ public class Location
     //efcore
     private Location() {}
     
-    private Location(LocationId id, LocationName name, LocationAddress address, LocationTimezone timezone,bool isActive, DateTime createdAt, DateTime updatedAt)
+    public Location(LocationId id, LocationName name, LocationAddress address, LocationTimezone timezone,bool isActive, DateTime createdAt, DateTime updatedAt)
     {
         Id = id;
         Name = name;
@@ -38,16 +38,4 @@ public class Location
     public DateTime UpdatedAt { get; private set; }
     
     public IReadOnlyList<DepartmentLocation> DepartmentLocations => _departmentLocations;
-
-    public static Result<Location, Error> Create(
-        LocationId id,
-        LocationName name,
-        LocationAddress address,
-        LocationTimezone timezone,
-        bool isActive,
-        DateTime createdAt,
-        DateTime updatedAt)
-    {
-        return new Location(id, name, address, timezone, isActive, createdAt, updatedAt);
-    }
 }

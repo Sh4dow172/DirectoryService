@@ -9,7 +9,7 @@ public class Department
     //efcore
     private Department() {}
     
-    private Department(
+    public Department(
         DepartmentId id,
         DepartmentName name,
         DepartmentIdentifier identifier,
@@ -31,6 +31,7 @@ public class Department
 
     private readonly List<DepartmentPosition> _departmentPositions = [];
     private readonly List<DepartmentLocation> _departmentLocations = [];
+    private readonly List<Department> _subDepartments = [];
     
     public DepartmentId Id { get; private set; }
     
@@ -53,18 +54,6 @@ public class Department
     public IReadOnlyList<DepartmentPosition> DepartmentPositions => _departmentPositions;
     
     public IReadOnlyList<DepartmentLocation> DepartmentLocations => _departmentLocations;
-
-    public static Result<Department, Error> Create(
-        DepartmentId id,
-        DepartmentName name,
-        DepartmentIdentifier identifier,
-        Guid parentId,
-        DepartmentPath path,
-        short depth,
-        bool isActive,
-        DateTime createdAt,
-        DateTime updatedAt)
-    {
-        return new Department(id, name, identifier, parentId, path, depth, isActive);
-    }
+    
+    public IReadOnlyList<Department> SubDepartments => _subDepartments;
 }

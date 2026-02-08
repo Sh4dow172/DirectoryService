@@ -10,7 +10,7 @@ public class Position
     //efcore
     private Position() {}
     
-    private Position(PositionId id, PositionName name, PositionDescription description, bool isActive, DateTime createdAt, DateTime updatedAt)
+    public Position(PositionId id, PositionName name, PositionDescription description, bool isActive, DateTime createdAt, DateTime updatedAt)
     {
         Id = id;
         Name = name;
@@ -35,9 +35,4 @@ public class Position
     public DateTime UpdatedAt { get; private set; }
     
     public IReadOnlyList<DepartmentPosition> DepartmentLocations => _departmentPositions;
-
-    public static Result<Position, Error> Create(PositionId id, PositionName name, PositionDescription description, bool isActive, DateTime createdAt, DateTime updatedAt)
-    {
-        return new Position(id, name, description, isActive, createdAt, updatedAt);
-    }
 }
